@@ -16,6 +16,9 @@
 
 DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
 
+# call the proprietary setup
+$(call inherit-product-if-exists, vendor/xiaomi/kenzo/kenzo-vendor.mk)
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
